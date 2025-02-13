@@ -2,7 +2,7 @@ import './styles/index.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from './index';
 import AppRouter from './providers/router';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Navbar, Sidebar } from 'widgets';
 
 export default function App() {

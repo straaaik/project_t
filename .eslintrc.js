@@ -37,7 +37,6 @@ module.exports = {
         'no-underscore-dangle': 'warn',
         'import/no-extraneous-dependencies': 'off',
         'comma-dangle': 'off',
-        // Настроить
         'arrow-body-style': 'off',
         'implicit-arrow-linebreak': 'off',
         'react/jsx-wrap-multilines': 'off',
