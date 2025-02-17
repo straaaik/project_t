@@ -15,7 +15,9 @@ export const PageError = ({ className }: PageErrorProps) => {
     return (
         <div className={classNames(cls.PageError, {}, [className])}>
             <span>{t('Произошла ошибка')}</span>
-            <Button onClick={reloadPage}>{t('Обновить страницу')}</Button>
+            <Button theme={ThemeButton.DANGER} onClick={reloadPage}>
+                {t('Обновить страницу')}
+            </Button>
         </div>
     );
 };

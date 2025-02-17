@@ -4,6 +4,8 @@
 @import 'themes/light';
 
 .app {
+    --test-color: red;
+
     font: var(--font-m);
     background: var(--bg-color);
     color: var(--primary-color);
