@@ -16,13 +16,9 @@ const Template: ComponentStory<typeof ThemeSwitcher> = (args) => (
 );
 
 export const ThemeSwitcherDark = Template.bind({});
-ThemeSwitcherDark.args = {
-    theme: Theme.DARK,
-};
+ThemeSwitcherDark.args = {};
 ThemeSwitcherDark.decorators = [StyleDecorator(Theme.DARK)];
 
 export const ThemeSwitcherLight = Template.bind({});
-ThemeSwitcherLight.args = {
-    theme: Theme.LIGHT,
-};
+ThemeSwitcherLight.args = {};
 ThemeSwitcherLight.decorators = [StyleDecorator(Theme.LIGHT)];
