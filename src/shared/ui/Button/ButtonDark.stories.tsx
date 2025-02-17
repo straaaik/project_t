@@ -1,4 +1,4 @@
-import { ComponentStory, ComponentMeta, addDecorator } from '@storybook/react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button, ThemeButton } from './Button';
 import { StyleDecorator } from 'shared/config/storybook/StyleDecorator/StyleDecorator';
 import { Theme } from 'app';
@@ -11,6 +11,7 @@ export default {
     },
 } as ComponentMeta<typeof Button>;
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 // Темная тема
