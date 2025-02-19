@@ -15,7 +15,7 @@ export function LangSwitcher({ className, short }: LangSwitcherProps) {
     };
     return (
         <Button
-            theme={ButtonTheme.BACKGROUND_INVERTED}
+            theme={ButtonTheme.CLEAR}
             onClick={switcher}
             className={classNames('', {}, [className])}
         >

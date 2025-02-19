@@ -70,6 +70,7 @@ ButtonDarkBackgroundInverted.args = {
     children: 'Button',
     theme: ButtonTheme.BACKGROUND_INVERTED,
 };
+ButtonDarkBackgroundInverted.decorators = [StyleDecorator(Theme.DARK)];
 
 // Светлая тема
 
