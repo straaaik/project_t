@@ -14,11 +14,7 @@ export function LangSwitcher({ className, short }: LangSwitcherProps) {
         i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru');
     };
     return (
-        <Button
-            theme={ButtonTheme.CLEAR}
-            onClick={switcher}
-            className={classNames('', {}, [className])}
-        >
+        <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={switcher} className={classNames('', {}, [className])}>
             {short ? t('Короткий язык') : t('Язык')}
         </Button>
     );

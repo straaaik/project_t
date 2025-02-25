@@ -1,0 +1,69 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: -1;
+    color: var(--inverted-primary-color);
+}
+
+.Modal.dark {
+    --bg-color: rgb(37 36 34);
+    --primary-color: rgb(37 36 34);
+    --secondary-color: rgb(235 94 40);
+
+    // Инвертированные цвета
+
+    --inverted-bg-color: rgb(255 252 242);
+    --inverted-primary-color: rgb(255 252 242);
+    --inverted-secondary-color: rgb(235 94 40);
+}
+
+.Modal.light {
+    --bg-color: rgb(255 252 242);
+    --primary-color: rgb(255 252 242);
+    --secondary-color: rgb(235 94 40);
+
+    // Инвертированные цвета
+
+    --inverted-bg-color: rgb(37 36 34);
+    --inverted-primary-color: rgb(37 36 34);
+    --inverted-secondary-color: rgb(235 94 40);
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    padding: 20px;
+    border-radius: 12px;
+    background: var(--bg-color);
+    transform: scale(0.5);
+    transition: 0.3s transform;
+    max-width: 60%;
+}
+
+.opened {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: var(--z-index-modal);
+
+    .content {
+        transform: scale(1);
+    }
+}
+
+.isClosing {
+    .content {
+        transform: scale(0.2);
+    }
+}

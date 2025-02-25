@@ -3,6 +3,7 @@
     padding: 10px 15px;
 }
 
+.clearInverted,
 .clear {
     padding: 0;
     border: none;
@@ -10,30 +11,38 @@
     outline: none;
 }
 
+.clear {
+    color: var(--primary-color);
+}
+
+.clearInverted {
+    color: var(--inverted-primary-color);
+}
+
 .outline {
     padding: 10px 15px;
-    color: var(--inverted-primary-color);
-    border: 1px solid var(--inverted-primary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     background: none;
 }
 
 .danger {
     padding: 10px 15px;
     color: var(--primary-color);
-    background: var(--secondary-color);
+    background: var(--warn-color);
     border: none;
 }
 
 .background {
     border: none;
-    color: var(--inverted-primary-color);
-    background: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--bg-color);
 }
 
 .background-inverted {
-    color: var(--primary-color);
+    color: var(--inverted-primary-color);
     border: none;
-    background: var(--inverted-primary-color);
+    background: var(--inverted-bg-color);
 }
 
 .square {
