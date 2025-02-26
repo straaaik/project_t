@@ -3,14 +3,13 @@
 @import 'themes/dark';
 @import 'themes/light';
 
-body {
-    font: var(--font-m);
-    color: var(--inverted-primary-color);
-}
-
+.app_modal,
 .app {
     font: var(--font-m);
     color: var(--primary-color);
+}
+
+.app {
     background: var(--bg-color);
     min-height: 100vh;
 }

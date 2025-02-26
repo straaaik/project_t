@@ -10,30 +10,6 @@
     color: var(--inverted-primary-color);
 }
 
-.Modal.dark {
-    --bg-color: rgb(37 36 34);
-    --primary-color: rgb(37 36 34);
-    --secondary-color: rgb(235 94 40);
-
-    // Инвертированные цвета
-
-    --inverted-bg-color: rgb(255 252 242);
-    --inverted-primary-color: rgb(255 252 242);
-    --inverted-secondary-color: rgb(235 94 40);
-}
-
-.Modal.light {
-    --bg-color: rgb(255 252 242);
-    --primary-color: rgb(255 252 242);
-    --secondary-color: rgb(235 94 40);
-
-    // Инвертированные цвета
-
-    --inverted-bg-color: rgb(37 36 34);
-    --inverted-primary-color: rgb(37 36 34);
-    --inverted-secondary-color: rgb(235 94 40);
-}
-
 .overlay {
     width: 100%;
     height: 100%;
