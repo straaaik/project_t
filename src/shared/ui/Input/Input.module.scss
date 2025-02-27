@@ -1,0 +1,35 @@
+.inputWrapper {
+    display: flex;
+    margin: 12px 0;
+}
+
+.input {
+    background: var(--secondary-color);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--inverted-bg-color);
+    color: var(--primary-color);
+
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid var(--warn-color);
+    }
+}
+
+.placeholderWrapper {
+    position: relative;
+}
+
+.placeholder {
+    margin-left: 5px;
+    pointer-events: none;
+    font: var(--font-m);
+    color: var(--inverted-secondary-color);
+    position: absolute;
+    transition: 0.3s transform;
+}
+
+.focus {
+    position: absolute;
+    transform: translate(-4px, -20px);
+}

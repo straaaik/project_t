@@ -6,5 +6,7 @@
   "Произошла ошибка": "An error occurred",
   "Обновить страницу": "Update the page",
   "Короткий язык": "EN",
-  "Войти": "Log in"
+  "Войти": "Log in",
+  "Логин": "Login",
+  "Пароль": "Password"
 }
