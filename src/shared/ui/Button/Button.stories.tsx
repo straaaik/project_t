@@ -14,6 +14,13 @@ export default {
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
+export const ButtonDisabled = Template.bind({});
+ButtonDisabled.args = {
+    children: 'Выключена',
+    theme: ButtonTheme.BACKGROUND_INVERTED,
+    disabled: true,
+};
+
 export const ButtonSizeL = Template.bind({});
 ButtonSizeL.args = {
     children: '||',
