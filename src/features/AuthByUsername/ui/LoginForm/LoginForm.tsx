@@ -7,7 +7,8 @@ import { memo, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loginActions } from 'features/AuthByUsername/model/slice/loginSlice';
 import { getLoginState } from 'features/AuthByUsername/model/selectors/getLoginState/getLoginState';
-import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/LoginByUsername';
+import { loginByUsername } from 'features/AuthByUsername/model/services/loginByUsername/loginByUsername';
+import { TextTheme, Text } from 'shared/ui/Text/Text';
 
 interface LoginFormProps {
     className?: string;
@@ -39,9 +40,10 @@ export const LoginForm = memo(({ className }: LoginFormProps) => {
 
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
-            {error && <div>{error}</div>}
+            <Text className={cls.text} title={t('Авторизация')} />
             <Input autofocus placeholder={t('Логин')} type="text" onChange={onChangeUsername} value={username} />
             <Input placeholder={t('Пароль')} type="text" onChange={onChangePassword} value={password} />
+            {error && <Text theme={TextTheme.ERROR} text={t('Неверный логин или пароль')} />}
             <Button theme={ButtonTheme.OUTLINE} className={cls.loginBtn} onClick={onLoginClick} disabled={isLoading}>
                 {t('Войти')}
             </Button>

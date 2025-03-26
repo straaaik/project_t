@@ -20,6 +20,7 @@ ButtonDisabled.args = {
     theme: ButtonTheme.BACKGROUND_INVERTED,
     disabled: true,
 };
+ButtonDisabled.decorators = [StyleDecorator(Theme.DARK)];
 
 export const ButtonSizeL = Template.bind({});
 ButtonSizeL.args = {
