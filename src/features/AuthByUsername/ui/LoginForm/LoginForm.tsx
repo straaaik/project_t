@@ -13,7 +13,7 @@ import { ReduxStoreWithManager } from 'app/providers/StoreProvider';
 import { getLoginUsername } from 'features/AuthByUsername/model/selectors/getLoginUsername/getLoginUsername';
 import { getLoginPassword } from 'features/AuthByUsername/model/selectors/getLoginPassword/getLoginPassword';
 import { getLoginError } from 'features/AuthByUsername/model/selectors/getLoginError/getLoginError';
-import { getLoginIsLoading } from 'features/AuthByUsername/model/selectors/getLoginIsLoading/getLoadingIsLoading';
+import { getLoginIsLoading } from 'features/AuthByUsername/model/selectors/getLoginIsLoading/getLoginIsLoading';
 import { DynamicLoader, ReducersList } from 'shared/lib/components/DynamicLoader/DynamicLoader';
 
 export interface LoginFormProps {
@@ -57,12 +57,7 @@ const LoginForm = memo(({ className }: LoginFormProps) => {
                 <Input autofocus placeholder={t('Логин')} type="text" onChange={onChangeUsername} value={username} />
                 <Input placeholder={t('Пароль')} type="text" onChange={onChangePassword} value={password} />
                 {error && <Text theme={TextTheme.ERROR} text={t('Неверный логин или пароль')} />}
-                <Button
-                    theme={ButtonTheme.OUTLINE}
-                    className={cls.loginBtn}
-                    onClick={onLoginClick}
-                    disabled={isLoading}
-                >
+                <Button theme={ButtonTheme.OUTLINE} className={cls.loginBtn} onClick={onLoginClick} disabled={isLoading}>
                     {t('Войти')}
                 </Button>
             </div>
