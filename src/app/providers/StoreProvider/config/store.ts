@@ -3,6 +3,7 @@ import { StateSchema } from './StateSchema';
 import { counterReducer } from 'entitis/Counter';
 import { userReducer } from 'entitis/User';
 import { createReducerManager } from './reducerManager';
+import { profileReducer } from 'entitis/Profile';
 
 export function createReduxStore(initialState: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
     const rootReducer: ReducersMapObject<StateSchema> = {
@@ -24,3 +25,5 @@ export function createReduxStore(initialState: StateSchema, asyncReducers?: Redu
 
     return store;
 }
+
+export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];

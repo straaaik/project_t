@@ -3,11 +3,13 @@ import { CounterSchema } from 'entitis/Counter';
 import { UserSchema } from 'entitis/User';
 import { LoginSchema } from 'features/AuthByUsername';
 import { ReducerManager } from './reducerManager';
+import { ProfileSchema } from 'entitis/Profile';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     loginForm?: LoginSchema;
+    profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

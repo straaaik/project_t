@@ -31,22 +31,6 @@
     flex-direction: column;
 }
 
-.item {
-    display: flex;
-    margin-top: 10px;
-    align-items: center;
-}
-
-.icon {
-    height: var(--font-line-xl);
-    width: var(--font-line-l);
-}
-
-.link {
-    margin-left: 10px;
-    opacity: 1;
-}
-
 .collapsed {
     width: var(--sidebar-wight-collapsed);
 

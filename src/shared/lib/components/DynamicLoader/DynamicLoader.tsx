@@ -14,11 +14,7 @@ interface DynamicLoaderProps {
     removeAfterUnmount: boolean;
 }
 
-export const DynamicLoader: FC<DynamicLoaderProps> = ({
-    children,
-    reducers,
-    removeAfterUnmount,
-}: DynamicLoaderProps) => {
+export const DynamicLoader: FC<DynamicLoaderProps> = ({ children, reducers, removeAfterUnmount }: DynamicLoaderProps) => {
     const dispatch = useDispatch();
     const store = useStore() as ReduxStoreWithManager;
 
@@ -32,7 +28,7 @@ export const DynamicLoader: FC<DynamicLoaderProps> = ({
             if (removeAfterUnmount) {
                 Object.entries(reducers).forEach(([key]: ReducersListEntry) => {
                     store.reducerManager.remove(key);
-                    dispatch({ type: `INIT ${key}` });
+                    dispatch({ type: `REMOVE ${key}` });
                 });
             }
         };
