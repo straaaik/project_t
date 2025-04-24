@@ -1,8 +1,9 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ProfilePage.module.scss';
-import { useTranslation } from 'react-i18next';
 import { DynamicLoader, ReducersList } from 'shared/lib/components/DynamicLoader/DynamicLoader';
-import { profileReducer } from 'entitis/Profile';
+import { fetchProfileData, ProfileCard, profileReducer } from 'entitis/Profile';
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
+import { useEffect } from 'react';
 
 interface ProfilePageProps {
     className?: string;
@@ -13,10 +14,17 @@ const reducers: ReducersList = {
 };
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
-    const { t } = useTranslation('translation');
+    const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(fetchProfileData());
+    }, [dispatch]);
+
     return (
         <DynamicLoader reducers={reducers} removeAfterUnmount>
-            <div className={classNames(cls.ProfilePage, {}, [className])}>{t('Профиль')}</div>
+            <div className={classNames(cls.ProfilePage, {}, [className])}>
+                <ProfileCard />
+            </div>
         </DynamicLoader>
     );
 };

@@ -20,7 +20,7 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
         <div data-testid="sidebar" className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}>
             <div className={cls.items}>
                 {SidebarItemsList.map((item) => (
-                    <SidebarItem item={item} collapsed={collapsed} />
+                    <SidebarItem key={item.path} item={item} collapsed={collapsed} />
                 ))}
             </div>
             <Button

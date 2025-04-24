@@ -1,7 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StyleDecorator } from 'shared/config/storybook/StyleDecorator/StyleDecorator';
 import { Text, TextTheme } from './Text';
-import { title } from 'process';
 import { Theme } from 'app';
 
 export default {

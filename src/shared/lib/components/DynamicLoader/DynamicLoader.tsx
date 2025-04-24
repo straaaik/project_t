@@ -6,8 +6,6 @@ import { Reducer } from '@reduxjs/toolkit';
 
 export type ReducersList = { [key in StateSchemaKey]?: Reducer };
 
-type ReducersListEntry = [StateSchemaKey, Reducer];
-
 interface DynamicLoaderProps {
     reducers: ReducersList;
     children: ReactNode;
@@ -19,15 +17,15 @@ export const DynamicLoader: FC<DynamicLoaderProps> = ({ children, reducers, remo
     const store = useStore() as ReduxStoreWithManager;
 
     useEffect(() => {
-        Object.entries(reducers).forEach(([key, reducer]: ReducersListEntry) => {
-            store.reducerManager.add(key, reducer);
+        Object.entries(reducers).forEach(([key, reducer]) => {
+            store.reducerManager.add(key as StateSchemaKey, reducer);
             dispatch({ type: `INIT ${key}` });
         });
 
         return () => {
             if (removeAfterUnmount) {
-                Object.entries(reducers).forEach(([key]: ReducersListEntry) => {
-                    store.reducerManager.remove(key);
+                Object.entries(reducers).forEach(([key]) => {
+                    store.reducerManager.remove(key as StateSchemaKey);
                     dispatch({ type: `REMOVE ${key}` });
                 });
             }

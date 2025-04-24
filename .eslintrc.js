@@ -26,7 +26,6 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/extensions': 'off',
         'import/prefer-default-export': 'off',
-        'no-unused-vars': 'warn',
         'react/function-component-definition': 'off',
         'object-curly-newline': 'off',
         'react/jsx-props-no-spreading': 'warn',
@@ -44,6 +43,9 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'max-len': 'off',
         'no-param-reassign': 'off',
+        'no-undef': 'off',
+        'no-unused-vars': 'off',
+        '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     },
     globals: {
         __IS_DEV__: true,
