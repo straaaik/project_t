@@ -34,3 +34,9 @@
     position: absolute;
     transform: translate(-4px, -30px);
 }
+
+.readOnly {
+    .input {
+        border-bottom: 1px solid var(--bg-color);
+    }
+}

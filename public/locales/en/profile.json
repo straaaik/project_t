@@ -2,5 +2,15 @@
   "Профиль": "Profile",
   "Редактировать": "Edit",
   "Имя": "Name",
-  "Фамилия": "Surname"
+  "Фамилия": "Surname",
+  "Произошла ошибка": "An error occurred",
+  "Попробуйте обновить страницу": "Try to update the page",
+  "Отменить": "Cancel",
+  "Сохранить": "Save",
+  "Никнейм": "Nickname",
+  "Возраст": "Age",
+  "Город": "City",
+  "Страна": "Country",
+  "Валюта": "Currency",
+  "Аватар": "Avatar"
 }

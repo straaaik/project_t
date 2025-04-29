@@ -1,5 +1,5 @@
 .title {
-    font: var(--font-l);
+    font: var(--font-xl);
     color: var(--primary-color);
 }
 
@@ -16,4 +16,16 @@
     .text {
         color: var(--warn-secondary-color);
     }
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
 }

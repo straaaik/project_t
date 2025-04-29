@@ -1,0 +1,20 @@
+.WrapperSelect {
+    display: flex;
+}
+
+.title {
+    margin-right: 10px;
+}
+
+.select {
+    outline: none;
+    background: transparent;
+    color: var(--primary-color);
+    padding: 2px 10px 2px 2px;
+    border: 1px solid var(--inverted-bg-color);
+}
+
+.option {
+    background: var(--inverted-bg-color);
+    color: var(--inverted-primary-color);
+}
