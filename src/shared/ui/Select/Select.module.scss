@@ -1,17 +1,26 @@
 .WrapperSelect {
     display: flex;
+    flex-direction: column;
 }
 
 .title {
-    margin-right: 10px;
+    margin-left: 2px;
 }
 
 .select {
+    min-width: 80px;
     outline: none;
-    background: transparent;
+    background: var(--secondary-color);
     color: var(--primary-color);
-    padding: 2px 10px 2px 2px;
-    border: 1px solid var(--inverted-bg-color);
+    padding: 10px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.select:disabled {
+    border: none;
+    opacity: 1;
+    background: var(--secondary-color);
+    appearance: none;
 }
 
 .option {

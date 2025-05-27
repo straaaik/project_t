@@ -33,9 +33,9 @@
   "profile": {
     "first": "Igor",
     "lastname": "Timofeev",
-    "age": 22,
+    "age": "22",
     "currency": "RUB",
-    "country": "Belarus",
+    "country": "Russia",
     "city": "Moscow",
     "username": "admin",
     "avatar": "https://cdn1.flamp.ru/4229585e87897ca9d895ded85fc57006.png"

@@ -12,5 +12,11 @@
   "Город": "City",
   "Страна": "Country",
   "Валюта": "Currency",
-  "Аватар": "Avatar"
+  "Аватар": "Avatar",
+  "Возраст указан неверно": "Age is incorrect",
+  "Имя не указано": "The name is not indicated",
+  "Фамилия не указана": "The surname is not indicated",
+  "Никнейм не указан": "Nickname is not indicated",
+  "Данные не получены": "Data is not obtained",
+  "Серверная ошибка": "Server error"
 }

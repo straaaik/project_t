@@ -55,8 +55,8 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         <DynamicLoader removeAfterUnmount reducers={initialReducers}>
             <div className={classNames(cls.LoginForm, {}, [className])}>
                 <Text className={cls.text} title={t('Авторизация')} />
-                <Input autofocus placeholder={t('Логин')} type="text" onChange={onChangeUsername} value={username} />
-                <Input placeholder={t('Пароль')} type="text" onChange={onChangePassword} value={password} />
+                <Input className={cls.input} autofocus placeholder={t('Логин')} type="text" onChange={onChangeUsername} value={username} />
+                <Input className={cls.input} placeholder={t('Пароль')} type="text" onChange={onChangePassword} value={password} />
                 {error && <Text theme={TextTheme.ERROR} text={t('Неверный логин или пароль')} />}
                 <Button theme={ButtonTheme.OUTLINE} className={cls.loginBtn} onClick={onLoginClick} disabled={isLoading}>
                     {t('Войти')}

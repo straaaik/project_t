@@ -23,7 +23,6 @@ export const ProfileCardHeader = ({ className }: ProfileCardHeaderProps) => {
 
     const onUpdate = useCallback(() => {
         dispatch(updateProfileData());
-        dispatch(profileActions.updateReadOnly(true));
     }, [dispatch]);
 
     const onCancel = useCallback(() => {

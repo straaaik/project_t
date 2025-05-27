@@ -1,6 +1,5 @@
 .inputWrapper {
     display: flex;
-    margin: 12px 0;
 }
 
 .input {
@@ -10,6 +9,7 @@
     border-bottom: 1px solid var(--inverted-bg-color);
     color: var(--primary-color);
     font: var(--font-l);
+    padding-left: 5px;
 
     &:focus {
         outline: none;

@@ -1,6 +1,6 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './Select.module.scss';
-import { ChangeEvent, InputHTMLAttributes, useMemo } from 'react';
+import { ChangeEvent, useMemo } from 'react';
 
 interface Options {
     value: string;

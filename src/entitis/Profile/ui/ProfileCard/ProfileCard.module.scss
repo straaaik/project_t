@@ -12,7 +12,15 @@
 .avatarWrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+}
+
+.selectWrapper {
+    display: flex;
+
+    .input {
+        margin-right: 5px;
+    }
 }
 
 .loading {
