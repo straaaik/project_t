@@ -5,6 +5,7 @@
     "scripts": {
         "start": "webpack serve --env port=3000",
         "start:server": "node ./json-server/index.js",
+        "start:dev": "concurrently \"npm start\" \"npm run start:server\"",
         "build:prod": "webpack --env mode=production",
         "build:dev": "webpack --env mode=development",
         "lint:ts": "npx eslint \"**/*.{ts,tsx}\"",
@@ -51,6 +52,7 @@
         "@typescript-eslint/eslint-plugin": "5.12.1",
         "@typescript-eslint/parser": "5.12.1",
         "babel-loader": "8.2.3",
+        "concurrently": "^7.0.0",
         "css-loader": "6.6.0",
         "eslint": "8.10.0",
         "eslint-config-airbnb": "19.0.4",
