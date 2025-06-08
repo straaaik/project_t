@@ -6,12 +6,14 @@ import { ReducerManager } from './reducerManager';
 import { ProfileSchema } from 'entitis/Profile';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
+import { ArticleDetailsSchema } from 'entitis/Article';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

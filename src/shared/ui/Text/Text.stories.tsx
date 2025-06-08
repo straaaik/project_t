@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { StyleDecorator } from 'shared/config/storybook/StyleDecorator/StyleDecorator';
-import { Text, TextTheme } from './Text';
+import { Text, TextSize, TextTheme } from './Text';
 import { Theme } from 'app';
 
 export default {
@@ -40,6 +40,22 @@ ErrorDark.args = {
 };
 ErrorDark.decorators = [StyleDecorator(Theme.DARK)];
 
+export const TitleTextDarkL = Template.bind({});
+TitleTextDarkL.args = {
+    title: 'Заголовок',
+    text: 'Описание',
+    size: TextSize.L,
+};
+TitleTextDarkL.decorators = [StyleDecorator(Theme.DARK)];
+
+export const TitleTextDarkM = Template.bind({});
+TitleTextDarkM.args = {
+    title: 'Заголовок',
+    text: 'Описание',
+    size: TextSize.M,
+};
+TitleTextDarkM.decorators = [StyleDecorator(Theme.DARK)];
+
 // -----------------------------------------------------------------
 
 export const TitleTextLight = Template.bind({});
@@ -68,3 +84,19 @@ ErrorLight.args = {
     theme: TextTheme.ERROR,
 };
 ErrorLight.decorators = [StyleDecorator(Theme.LIGHT)];
+
+export const TitleTextLightL = Template.bind({});
+TitleTextLightL.args = {
+    title: 'Заголовок',
+    text: 'Описание',
+    size: TextSize.L,
+};
+TitleTextLightL.decorators = [StyleDecorator(Theme.LIGHT)];
+
+export const TitleTextLightM = Template.bind({});
+TitleTextLightM.args = {
+    title: 'Заголовок',
+    text: 'Описание',
+    size: TextSize.M,
+};
+TitleTextLightM.decorators = [StyleDecorator(Theme.LIGHT)];

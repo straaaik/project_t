@@ -1,0 +1,22 @@
+.Skeleton {
+    background-color: var(--secondary-color);
+    animation: load 2s infinite;
+    border-radius: 12px;
+}
+
+@keyframes load {
+    0% {
+        transform: scale(0.99);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.01);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0.99);
+        opacity: 0.3;
+    }
+}

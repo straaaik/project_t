@@ -8,7 +8,7 @@ export enum AvatarSize {
 }
 interface AvatarProps {
     className?: string;
-    image: string;
+    image?: string;
     size?: AvatarSize;
 }
 
