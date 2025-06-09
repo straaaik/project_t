@@ -2,7 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import cls from './ArticleDetails.module.scss';
 import { DynamicLoader, ReducersList } from 'shared/lib/components/DynamicLoader/DynamicLoader';
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice';
-import { memo, useCallback, useEffect } from 'react';
+import { memo, useCallback } from 'react';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { fetchArticleById } from 'entitis/Article/model/services/fetchArticleById';
 import { useSelector } from 'react-redux';
@@ -18,6 +18,7 @@ import { ArticleBlock, ArticlesBlockType } from 'entitis/Article/model/types/typ
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent';
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -48,9 +49,7 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
         }
     }, []);
 
-    useEffect(() => {
-        if (__PROJECT__ !== 'storybook') dispatch(fetchArticleById(id));
-    }, [dispatch, id]);
+    useInitialEffect(() => dispatch(fetchArticleById(id)));
 
     let content;
 

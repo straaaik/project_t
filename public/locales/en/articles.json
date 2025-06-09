@@ -2,5 +2,7 @@
   "Статьи": "Articles",
   "Статья": "Article",
   "Статья не найдена": "The article was not found",
-  "Произошла ошибка при загрузке статьи": "An error has occurred when loading an article"
+  "Произошла ошибка при загрузке статьи": "An error has occurred when loading an article",
+  "Комментарии": "Comments",
+  "Комментарии отсутствуют": "There are no comments"
 }

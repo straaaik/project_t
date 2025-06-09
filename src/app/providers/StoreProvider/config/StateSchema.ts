@@ -7,13 +7,17 @@ import { ProfileSchema } from 'entitis/Profile';
 import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 import { ArticleDetailsSchema } from 'entitis/Article';
+import { ArticleAboutCommentSchema } from 'pages/ArticleAboutPage';
 
 export interface StateSchema {
     counter: CounterSchema;
     user: UserSchema;
+
+    // Async
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
+    articleDetailsComments?: ArticleAboutCommentSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
