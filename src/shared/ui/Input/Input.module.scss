@@ -10,6 +10,7 @@
     color: var(--primary-color);
     font: var(--font-l);
     padding-left: 5px;
+    width: 100%;
 
     &:focus {
         outline: none;
@@ -28,6 +29,7 @@
     color: var(--inverted-secondary-color);
     position: absolute;
     transition: 0.3s transform;
+    white-space: nowrap;
 }
 
 .focus {

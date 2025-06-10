@@ -5,6 +5,7 @@ import { Currency } from 'entitis/Currency';
 import { ValidateProfileError } from '../model/types/profile';
 
 const data = {
+    id: '1',
     age: '18',
     city: 'Moscow',
     country: Country.Armenia,

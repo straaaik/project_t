@@ -15,22 +15,7 @@ function AppRouter() {
         return <Route key={route.path} path={route.path} element={route.authOnly ? <RequireAuth>{element}</RequireAuth> : element} />;
     }, []);
 
-    return (
-        <Routes>
-            {Object.values(routeConfig).map(renderWithWrapper)}
-            {/* {routs.map(({ element, path }) => (
-                <Route
-                    key={path}
-                    path={path}
-                    element={
-                        <Suspense fallback={<PageLoader />}>
-                            <div className="page-wrapper">{element}</div>
-                        </Suspense>
-                    }
-                />
-            ))} */}
-        </Routes>
-    );
+    return <Routes>{Object.values(routeConfig).map(renderWithWrapper)}</Routes>;
 }
 
 export default memo(AppRouter);

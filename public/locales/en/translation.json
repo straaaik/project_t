@@ -12,5 +12,7 @@
   "Авторизация": "Authorization",
   "Неверный логин или пароль": "Incorrect username or password.",
   "Выйти": "Go out",
-  "Профиль": "Profile"
+  "Профиль": "Profile",
+  "Введите комментарий": "Enter the comment",
+  "Отправить": "Send"
 }

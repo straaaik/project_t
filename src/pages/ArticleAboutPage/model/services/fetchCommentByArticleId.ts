@@ -20,7 +20,6 @@ export const fetchCommentsByArticleId = createAsyncThunk<IComment[], string | un
             if (!response.data) {
                 throw new Error();
             }
-
             return response.data;
         } catch (e) {
             return rejectWithValue('error');

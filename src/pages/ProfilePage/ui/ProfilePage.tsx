@@ -21,6 +21,7 @@ import { Country } from 'entitis/Country/model/types/Country';
 import { Currency } from 'entitis/Currency/model/types/Currency';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 
 interface ProfilePageProps {
     className?: string;
@@ -38,10 +39,11 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
     const isLoading = useSelector(getProfileIsLoading);
     const readOnly = useSelector(getProfileReadOnly);
     const validateError = useSelector(getProfileValidateError);
+    const { id } = useParams<{ id: string }>();
 
     useEffect(() => {
-        if (__PROJECT__ !== 'storybook') dispatch(fetchProfileData());
-    }, [dispatch]);
+        if (__PROJECT__ !== 'storybook') dispatch(fetchProfileData(id));
+    }, [dispatch, id]);
 
     const validateErrorTranslate = {
         [ValidateProfileError.INCORRECT_AGE]: t('Возраст указан неверно'),

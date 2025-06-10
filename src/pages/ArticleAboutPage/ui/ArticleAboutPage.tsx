@@ -9,9 +9,11 @@ import { articleAboutCommentReducer, getArticleComments } from '../model/slice/A
 import { useSelector } from 'react-redux';
 import { getCommentsError, getCommentsLoading } from '../model/selectors/comments';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect';
-import { fetchArticleById } from 'entitis/Article/model/services/fetchArticleById';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch';
 import { fetchCommentsByArticleId } from '../model/services/fetchCommentByArticleId';
+import { AddCommentForm } from 'features/addCommentForm';
+import { useCallback } from 'react';
+import { addCommentForArticle } from '../model/services/addCommentForArticle';
 
 const reducers: ReducersList = {
     articleDetailsComments: articleAboutCommentReducer,
@@ -25,6 +27,13 @@ export default function ArticleAboutPage() {
     const commentsIsLoading = useSelector(getCommentsLoading);
     const commentsIsError = useSelector(getCommentsError);
 
+    const onSendComment = useCallback(
+        (text: string) => {
+            dispatch(addCommentForArticle(text));
+        },
+        [dispatch]
+    );
+
     useInitialEffect(() => dispatch(fetchCommentsByArticleId(id)));
 
     if (!id) return <div>{t('Статья не найдена')}</div>;
@@ -34,6 +43,7 @@ export default function ArticleAboutPage() {
             <div>
                 <ArticleDetails id={id} />
                 <Text className={cls.commentTitle} title={t('Комментарии')} />
+                <AddCommentForm onSendComment={onSendComment} />
                 <CommentList isLoading={commentsIsLoading} comments={comments} />
             </div>
         </DynamicLoader>

@@ -4,6 +4,7 @@ import { TestAsyncThunk } from 'shared/config/test/testAsyncThunk/testAsyncThunk
 import { Currency } from 'entitis/Currency';
 
 const data = {
+    id: '1',
     age: '18',
     city: 'Moscow',
     country: Country.Armenia,
@@ -18,7 +19,7 @@ describe('fetchProfileData', () => {
         const thunk = new TestAsyncThunk(fetchProfileData);
         thunk.api.get.mockReturnValue(Promise.resolve({ data }));
 
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
 
         expect(thunk.api.get).toHaveBeenCalled();
         expect(result.meta.requestStatus).toBe('fulfilled');
@@ -29,7 +30,7 @@ describe('fetchProfileData', () => {
         const thunk = new TestAsyncThunk(fetchProfileData);
         thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
 
-        const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
 
         expect(thunk.api.get).toHaveBeenCalled();
         expect(thunk.dispatch).toHaveBeenCalledTimes(2);
